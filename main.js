@@ -4,18 +4,12 @@ const listapal=["casa","perro","planta","amistad","gato","lobo","familia","yuca"
 
 const random = Math.floor(Math.random() * listapal.length);
 const palabraarr=listapal[random]
-console.log(palabraarr)
 const nuevoarray=listapal.filter(word => word !=palabraarr);
-console.log(nuevoarray)
 
 
-const cajapalabra=document.getElementById('palabra')
 
+let cont=0,cont2=0,cont3=0,listaletra=[]
 
-let cont=0
-let cont2=0
-let cont3=0
-let listaletra=[]
 
 function Cajapal(param,contador) {
     for(let i=0;i<contador;i++){
@@ -72,6 +66,8 @@ function buscar(letra,contador,lista) {
 
     
 }
+
+const cajapalabra=document.getElementById('palabra')
 
 Cajapal(cajapalabra,listapal[random].length)
 
@@ -137,4 +133,3 @@ letra.addEventListener("keypress",function(event){
 //     console.log("loca")
     
 // })
-
